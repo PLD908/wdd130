@@ -18,18 +18,27 @@ body {
     color: var(--text-color);
 }
 
-nav {
+header {
     background-color: var(--primary-color);
     color: var(--light-text);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2px 20px;
+    padding: 10px 20px;
 }
 
-nav .logo {
+.header-content {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
     max-width: 120px;
     height: 80px;
+}
+
+nav {
+    justify-self: end;
 }
 
 nav ul {
@@ -38,10 +47,6 @@ nav ul {
     gap: 20px;
     margin: 0;
     padding: 0;
-}
-
-nav ul li {
-    display: inline;
 }
 
 nav ul li a {
@@ -67,7 +72,7 @@ h1, h2 {
     font-family: "Roboto", sans-serif;
 }
 
-p {
+section p, article p {
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto 20px;
@@ -130,25 +135,55 @@ section h2 {
     margin-bottom: 20px;
 }
 
-section img {
+.adventures {
+    padding: 20px;
+    background-color: #f4f4f4;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.adventures h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.adventure-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.adventure-grid figure {
+    margin: 0;
+    text-align: center;
+}
+
+img {
     width: 100%;
-    max-width: 300px;
-    height: auto;
-    margin: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 200px;
+    object-fit: cover;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
 }
 
-section img:hover {
+img:hover {
     transform: scale(1.05);
+}
+
+.adventure-grid figcaption {
+    margin-top: 10px;
+    font-weight: bold;
 }
 
 footer {
     background-color: var(--primary-color);
     color: var(--light-text);
-    padding: 20px 0;
-    text-align: center;
+    padding: 10px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 footer img {
@@ -160,10 +195,32 @@ footer a {
     text-decoration: none;
 }
 
+@media (max-width: 1000px) {
+    .adventure-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .adventure-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
+    .header-content {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 20px;
+    }
+
+    nav {
+        justify-self: center;
+    }
+
     nav ul {
         flex-direction: column;
-        gap: 10px;
+        align-items: center;
     }
 
     article {

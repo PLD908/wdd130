@@ -12,15 +12,17 @@
 </head>
 <body>
     <header>
-        <nav>
-            <img src="images/Rapids_logo.png" alt="Rapids_logo" class="logo">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="trips.html">Trip</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
+        <div class="header-content">
+            <img src="images/Rapids_logo.png" alt="Rapids logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="trips.html">Trips</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
@@ -34,15 +36,35 @@
         </div>
         <section>
             <h2>History</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis debitis odit ad fuga? A iure quae voluptatibus nobis alias consectetur accusantium tempora nemo maiores sapiente dicta animi placeat, expedita recusandae.</p>
+            <div class="history">
+                <img src="images/rafting_history.jpg" alt="nature beauty">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis debitis odit ad fuga? A iure quae voluptatibus nobis alias consectetur accusantium tempora nemo maiores sapiente dicta animi placeat, expedita recusandae.</p>
+            </div>
         </section>
-        <section>
+        <section class="adventures">
             <h2>Adventure Awaits You!</h2>
-            <img src="images/family_friendly.jpg" alt="family_friendly">
-            <img src="images/fun_atmosphere.jpg" alt="fun_atmosphere">
-            <img src="images/memorable_experience.jpg" alt="memorable_experience">
-            <img src="images/rafting.jpg" alt="rafting">
-            <img src="images/rafting_trip.jpg" alt="rafting_trip">
+            <div class="adventure-grid">
+                <figure>
+                    <img src="images/family_friendly.jpg" alt="family friendly rafting">
+                    <figcaption>Family Friendly</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/fun_atmosphere.jpg" alt="fun atmosphere">
+                    <figcaption>Fun Atmosphere</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/memorable_experience.jpg" alt="memorable experience">
+                    <figcaption>Memorable Experience</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rafting.jpg" alt="rafting">
+                    <figcaption>Los Dientes del Diablo</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/rafting_trip.jpg" alt="rafting trip">
+                    <figcaption>Half Day Adventure</figcaption>
+                </figure>
+            </div>
         </section>
     </main>
 
